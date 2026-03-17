@@ -1,0 +1,23 @@
+{
+  "name": "mar9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ag1": "ENV=ag1 playwright test",
+    "test:stg": "ENV=stg playwright test",
+    "test:prod": "ENV=prod playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "dotenv": "^17.3.1"
+  }
+}
