@@ -19,11 +19,11 @@ test('login with registered user', async ({ page }) => {
   console.log('registeredUser.email', registeredUser.email);
   console.log('registeredUser.password', registeredUser.password);
 
-  await page.goto(env.UI_URL);
+  await page.goto(`/`);
   await page.getByTestId('nav-sign-in').click();
   await page.getByTestId('email').fill(registeredUser.email);
   await page.getByTestId('password').fill(registeredUser.password);
   await page.getByTestId('login-submit').click();
 
-//   await expect(page.getByRole('heading', { name: `Welcome, ${registeredUser.email}!` })).toBeVisible();
+  await expect(page.getByRole('heading', {name: 'My Account'} )).toBeVisible();
 });
